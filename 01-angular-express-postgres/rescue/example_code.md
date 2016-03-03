@@ -87,7 +87,7 @@ router.get('/', function(req, res, next) {
 module.exports = router;
 ```
 
-## Pirates Controller with $http request to backend
+## Pirates Controller invoking our Pirates Service all function:
 ```js
 // app.js
 

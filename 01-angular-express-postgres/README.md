@@ -228,9 +228,7 @@ __Adding a `PiratesService service to our app:__
 app.factory('PiratesService', function ($http) {
   return {
     all: function() {
-      return $http.get('/api/pirates').then(function (response) {
-        return response.data;
-      })
+      return $http.get('/api/pirates');
     }
   }
 })
