@@ -1,0 +1,11 @@
+<form ng-submit='newCat.$valid && addCat()' name='newCat' >
+  <label for="">Cat Name</label>
+  <input ng-model='newcat.name' type='text' name="name" value="">
+  <label for="">Profile</label>
+  <input ng-model='newcat.profile' type='text' name="profile" value="">
+  <label for="">Age</label>
+  <input type="number" ng-model='newcat.age' name="age" value="">
+  <label for="">Active?</label>
+  <input ng-model='newcat.active' type="checkbox" name="active" value="">
+  <button type="submit" name="button">Submit</button>
+</form>

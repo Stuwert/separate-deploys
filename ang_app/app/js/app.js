@@ -11,9 +11,14 @@ app.config(function($routeProvider, $locationProvider) {
         templateUrl: 'partials/cats/index.html',
         controller: 'CatsIndexController'
       })
+      .when('/cats/new', {
+        templateUrl: 'partials/cats/newform.html',
+        controller: 'CatsFormController'
+      })
       .when('/cats/:id', {
         templateUrl: 'partials/cats/show.html',
         controller: 'CatsShowController'
       })
+
     $locationProvider.html5Mode(true);
 });

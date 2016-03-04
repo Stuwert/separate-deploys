@@ -9,6 +9,7 @@ var Cat = function(){
 
 
 router.get("/", function(req,res){
+  console.log("hitting");
    Cat().select().then(function(payload){
      res.json(payload);
    });
@@ -20,5 +21,11 @@ router.get("/:id", function(req,res){
    });
 });
 
+router.post('/', function(req, res){
+  Cat().insert(req.body).then(function(payload){
+    console.log(payload);
+    res.json(payload)
+  })
+})
 
 module.exports = router;

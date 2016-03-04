@@ -1,8 +1,8 @@
-Here are all the cats: 
+Here are all the cats:
 
 
 <p>
   <div ng-repeat="cat in cat_collection">
-     {{cat.name}}
+     <a ng-href='/cats/{{cat.id}}'>{{cat.name}}</a>
   </div>
 </p>

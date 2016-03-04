@@ -1,5 +1,5 @@
 app.controller("MainController", function($scope, $http, CatService){
-   // no instance variables here.... 
+   // no instance variables here....
 });
 
 app.controller("CatsIndexController", function($scope, CatService){
@@ -20,3 +20,13 @@ app.controller("CatsShowController", function($scope, CatService, $routeParams){
     console.log("an error occurred");
   });
 });
+
+app.controller("CatsFormController", function($scope, CatService, $routeParams, $location){
+  $scope.addCat = function(){
+    CatService.setCat($scope.newcat).then(function(){
+      $location.path('/cats')
+    })
+  }
+
+  CatService.setCat;
+})
